@@ -14,6 +14,15 @@ namespace PHPSTORM_META {
     use Windwalker\DI\Container;
 
     override(
+        Container::get(0),
+        map(
+            [
+                '' => '@',
+            ]
+        )
+    );
+
+    override(
         Container::createObject(0),
         map(
             [
@@ -33,6 +42,15 @@ namespace PHPSTORM_META {
 
     override(
         Container::newInstance(0),
+        map(
+            [
+                '' => '@',
+            ]
+        )
+    );
+
+    override(
+        Container::resolve(0),
         map(
             [
                 '' => '@',
